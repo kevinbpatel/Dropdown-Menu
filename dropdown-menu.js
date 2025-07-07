@@ -34,17 +34,26 @@ export const dropDown = () => {
 
   window.onclick = function (event) {
     if (!event.target.matches(".dropbtn")) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains("show")) {
-          openDropdown.classList.remove("show");
-        }
+      if (dropDownContent.style.display === "block") {
+        dropDownContent.style.display === "none";
       }
     }
   };
+  
+  dropDownContainer.style.position = "relative";
+  dropDownContainer.style.display = "inline-block";
 
+  dropDownContent.style.display = "none";
+  dropDownContent.style.position = "absolute";
+
+  link1.style.textDecoration = "none";
+  link1.style.display = "block";
+  link2.style.textDecoration = "none";
+  link2.style.display = "block";
+  link3.style.textDecoration = "none";
+  link3.style.display = "block";
+
+  
   return dropDownContainer;
 };
 
